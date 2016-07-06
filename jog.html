@@ -1,0 +1,22 @@
+<html>
+  <head></head>
+  <body>
+    <div id="game"></div>
+    <script type="text/javascript" src="crafty.js"></script>
+    <script>
+      Crafty.init(500,350, document.getElementById('game'));
+       Crafty.e("2D, DOM, Color, Mouse")
+    .color("red")
+    .attr({ w: 100, h: 100 })
+    .bind('MouseOver', function() {Crafty.log("over")})
+    .areaMap(0, 0, 50, 0, 50, 50, 0, 50);
+
+Crafty.e("2D, Mouse")
+    .areaMap([0, 0, 50, 0, 50, 50, 0, 50]);
+
+Crafty.e("2D, Mouse").areaMap(
+    new Crafty.polygon([0, 0, 50, 0, 50, 50, 0, 50])
+);
+    </script>
+  </body>
+</html>
